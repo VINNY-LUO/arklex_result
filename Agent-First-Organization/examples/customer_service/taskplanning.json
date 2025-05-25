@@ -1,0 +1,68 @@
+[
+    {
+        "task_name": "Provide detailed product information and make tailored recommendations based on user needs",
+        "steps": [
+            "Inquire about the user's specific needs or questions regarding the product.",
+            "Utilize the FaissRAGWorker to retrieve detailed product information from the company's internal documentation based on the user's inquiry.",
+            "Deliver the retrieved product information to the user using the MessageWorker.",
+            "Ask the user if they need more information or have additional questions.",
+            "If the user requests further assistance, use the FaissRAGWorker again to provide more detailed information or use the SearchWorker for real-time queries, then deliver the information using the MessageWorker.",
+            "Offer to make tailored product recommendations based on the user's feedback and needs."
+        ]
+    },
+    {
+        "task_name": "Provide real-time updates and information on order and delivery status",
+        "steps": [
+            "Inquire about the user's order details, such as order number or tracking number, to identify the specific order.",
+            "Attempt to retrieve real-time order status using available resources or provide an alternative solution if real-time data is not available.",
+            "Provide the user with the most up-to-date information about their order status and estimated delivery time.",
+            "Ask if the user has any further questions or needs additional assistance regarding their order.",
+            "Offer to notify the user of any future updates or changes to their order status if applicable."
+        ]
+    },
+    {
+        "task_name": "Assist with technical issues, troubleshooting, and usage guidance for robots",
+        "steps": [
+            "Inquire about the specific technical issue or question the user has regarding the robots.",
+            "Use the FaissRAGWorker to search the company's internal documentation for relevant information or troubleshooting steps specific to the user's issue.",
+            "Deliver the found information or guidance to the user using the MessageWorker.",
+            "Ask the user if the provided solution resolved their issue or if further assistance is required.",
+            "If the issue persists, offer additional troubleshooting steps or escalate the issue if necessary, using the DefaultWorker to determine the next steps."
+        ]
+    },
+    {
+        "task_name": "Provide information on pricing, rental terms, and purchase processes",
+        "steps": [
+            "Use MessageWorker to greet the user and ask for their specific inquiry regarding pricing, rental terms, or purchase processes.",
+            "Utilize FaissRAGWorker to retrieve detailed information from the company's internal documentation related to the user's inquiry.",
+            "Employ MessageWorker to deliver the retrieved information to the user, ensuring clarity and completeness.",
+            "Ask the user if they need further clarification or if they have any additional questions using MessageWorker.",
+            "If the user has more questions, repeat steps 2-4. If not, use MessageWorker to thank the user and offer further assistance if needed."
+        ]
+    },
+    {
+        "task_name": "Assist in scheduling regular maintenance or service for robots",
+        "steps": [
+            "Use the MessageWorker to greet the user and inquire about the specific robot model and the type of maintenance or service they wish to schedule.",
+            "Utilize the FaissRAGWorker to retrieve relevant information from the company's internal documentation regarding maintenance schedules and service procedures for the specified robot model.",
+            "With the MessageWorker, present the user with available service options and suggest a suitable maintenance schedule based on the information retrieved.",
+            "Ask the user if they have any additional questions or specific requests regarding the service using the MessageWorker.",
+            "Confirm the scheduled maintenance details with the user and provide instructions on how the service will be carried out, using the MessageWorker to ensure clarity and understanding."
+        ]
+    },
+    {
+        "task_name": "Provide details on company policies, warranty terms, and conditions",
+        "steps": [
+            "Provide details on company policies, warranty terms, and conditions"
+        ]
+    },
+    {
+        "task_name": "Inform user about current promotions, discounts, or sales events",
+        "steps": [
+            "Use FaissRAGWorker to retrieve information about current promotions, discounts, or sales events from the company's internal documentation.",
+            "Deliver the retrieved information to the user using MessageWorker, ensuring clarity and completeness.",
+            "Ask the user if they need further details about any specific promotion or if they have any other questions using MessageWorker.",
+            "If the user has additional questions or needs more information, use FaissRAGWorker to find the answers and respond using MessageWorker."
+        ]
+    }
+]
